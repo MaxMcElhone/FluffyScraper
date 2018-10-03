@@ -34,8 +34,9 @@ for link in soup.find_all('a'):
 for page in coursework_pages:
     web.go_to(root_url + page + "Coursework.jnz")
     soup = BeautifulSoup(web.get_page_source(), "html5lib")
+    for data in soup.select('.sidebar-link-title a'):
+        print(data.text)
     print(soup.find(id='pg0_V__dueNext__rptDueNext_ctl00__hypAssign'))
     print(soup.find(id='pg0_V__dueNext__rptDueNext_ctl01__hypAssign'))
 
 #pyforms web (yesssssssssssss)
-
