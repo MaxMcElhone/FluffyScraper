@@ -2,7 +2,6 @@
 #go_to() for redirecting
 #https://webbot.readthedocs.io/en/latest/webbot.html reference
 from bs4 import BeautifulSoup
-import requests
 from webbot import Browser
 import getpass
 
@@ -37,3 +36,6 @@ for page in coursework_pages:
     soup = BeautifulSoup(web.get_page_source(), "html5lib")
     print(soup.find(id='pg0_V__dueNext__rptDueNext_ctl00__hypAssign'))
     print(soup.find(id='pg0_V__dueNext__rptDueNext_ctl01__hypAssign'))
+
+#pyforms web (yesssssssssssss)
+
