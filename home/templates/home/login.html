@@ -2,16 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/base.css' %}">
   </head>
-  <body>
-    <form class="" action="index/" method="post">
-      {% csrf_token %}
-      <label for="userName">User Name:</label>
-      <input type="text" name="userName" id="userName"><br />
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password"><br />
-      <input type="submit" name="submit" value="submit">
-    </form>
+  <body class="vh100">
+    <div class="stiLogo">
+
+    </div>
+    <div class="container vh100">
+      <div class="cta card bg-info text-light">
+        <form class="" action="index/" method="post">
+          {% csrf_token %}
+          <legend>Please login as you would to STInet</legend>
+          <label for="userName">User Name:</label>
+          <input type="text" name="userName" id="userName" class="form-control"><br />
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" class="form-control"><br />
+          <input type="submit" name="submit" value="submit" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
   </body>
 </html>

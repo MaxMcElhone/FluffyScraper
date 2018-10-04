@@ -3,16 +3,6 @@ from django.http import HttpResponse
 from home.models import Coursework
 #get user input from django
 #https://stackoverflow.com/questions/25028895/very-simple-user-input-in-django
-# posts = [
-#     {
-#         'title': 'course 1',
-#         'body': 'assignment 1'
-#     },
-#     {
-#         'title': 'course 2',
-#         'body': 'assignment 2'
-#     }
-# ]
 
 # Create your views here.
 def index(request):

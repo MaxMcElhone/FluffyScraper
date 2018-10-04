@@ -1,0 +1,31 @@
+/* NOTE: general styles */
+a{
+  color: inherit;
+}
+a:hover{
+  color: inherit;
+}
+
+body{
+  background-color: #222224;
+}
+
+/* NOTE: cusom classes */
+.cta {
+  position: relative;
+  top: 35%;
+  transform: translateY(-35%);
+  padding: 5rem;
+}
+
+.vh100{
+    height: 100vh;
+}
+
+.stiLogo{
+  background: #222224 url('images/southeast_tech.png') no-repeat;
+  float: left;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}

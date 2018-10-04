@@ -2,22 +2,47 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/base.css' %}">
   </head>
   <body>
-    {% for course in coursework %} <!-- NOTE:  this is for logic -->
-      <h1>{{ course.courseName }} <!-- NOTE:  this is accessing a variable --></h1>
-      <p>
-        {{ course.courseUrl }}
-      </p>
-      <p>
-        {{ course.assignment1 }}<br />
-        {{ course.assignment1Desc }} <br>
-        {{ course.assignment1Link }} <br>
-        {{ course.assignment2 }}<br />
-        {{ course.assignment2Desc }} <br>
-        {{ course.assignment2Link }} <br>
-      </p>
-    {% endfor %}
+    <div class="container">
+      {% for course in coursework %}
+        <div class="card bg-info text-light mt-3 text-center">
+          <div class="card-header">
+            <h1>
+              <a href="{{ course.courseUrl }}">
+                {{ course.courseName }}
+              </a>
+            </h1>
+          </div>
+          <div class="car-body">
+            <h5>
+              <a href="{{ course.assignment1Link }}">
+                {{ course.assignment1 }}
+              </a>
+            </h5>
+            <p>
+              {{ course.assignment1Desc }}
+            </p>
+            <h5>
+              <a href="{{ course.assignment2Link }}">
+                {{ course.assignment2 }}
+              </a>
+            </h5>
+            <p>
+              {{ course.assignment2Desc }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
