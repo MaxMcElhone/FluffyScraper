@@ -5,10 +5,18 @@
     <title>Home</title>
   </head>
   <body>
-    {% for post in posts %} <!-- NOTE:  this is for logic -->
-      <h1>{{ post.title }} <!-- NOTE:  this is accessing a variable --></h1>
+    {% for course in coursework %} <!-- NOTE:  this is for logic -->
+      <h1>{{ course.courseName }} <!-- NOTE:  this is accessing a variable --></h1>
       <p>
-        {{ post.body }}
+        {{ course.courseUrl }}
+      </p>
+      <p>
+        {{ course.assignment1 }}<br />
+        {{ course.assignment1Desc }} <br>
+        {{ course.assignment1Link }} <br>
+        {{ course.assignment2 }}<br />
+        {{ course.assignment2Desc }} <br>
+        {{ course.assignment2Link }} <br>
       </p>
     {% endfor %}
   </body>
