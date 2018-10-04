@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    {% for post in posts %} <!-- NOTE:  this is for logic -->
+      <h1>{{ post.title }} <!-- NOTE:  this is accessing a variable --></h1>
+      <p>
+        {{ post.body }}
+      </p>
+    {% endfor %}
+  </body>
+</html>
