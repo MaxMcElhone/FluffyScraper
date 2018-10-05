@@ -26,18 +26,30 @@
           <div class="car-body">
             <h5>
               <a href="{{ course.assignment1Link }}">
-                {{ course.assignment1 }}
+                {{ course.assignment1 }} {{ course.assignment1Progress }}
               </a>
             </h5>
+            {% if "Tomorrow" in course.assignment1Desc %}
+            <p class="text-warning">
+            {% elif "Today" in course.assignment1Desc %}
+            <p class="text-danger">
+            {% else %}
             <p>
+            {% endif %}
               {{ course.assignment1Desc }}
             </p>
             <h5>
               <a href="{{ course.assignment2Link }}">
-                {{ course.assignment2 }}
+                {{ course.assignment2 }} {{ course.assignment2Progress }}
               </a>
             </h5>
+            {% if "Tomorrow" in course.assignment2Desc %}
+            <p class="text-warning">
+            {% elif "Today" in course.assignment2Desc %}
+            <p class="text-danger">
+            {% else %}
             <p>
+            {% endif %}
               {{ course.assignment2Desc }}
             </p>
           </div>

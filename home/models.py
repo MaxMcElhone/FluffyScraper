@@ -48,9 +48,11 @@ class Coursework:
                 'assignment1': assignment1.text,
                 'assignment1Desc': assignment1.get('aria-label'),
                 'assignment1Link': root_url + assignment1.get('href'),
+                'assignment1Progress': soup.find(id='pg0_V__dueNext__rptDueNext_ctl00__lblInfo').text,
                 'assignment2': assignment2.text,
                 'assignment2Desc': assignment2.get('aria-label'),
                 'assignment2Link': root_url + assignment2.get('href'),
+                'assignment2Progress': soup.find(id='pg0_V__dueNext__rptDueNext_ctl01__lblInfo').text,
             }
 
             coursework.append(course.copy())
