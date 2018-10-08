@@ -28,8 +28,9 @@ class Coursework:
 
         #get the html and add it to the parser
         soup = BeautifulSoup(web.get_page_source(), "html5lib")
-        for link in soup.find_all('a'):
-            if "/ICS/Academics/CIS" in link.get('href'):
+        mycourses = soup.find(id='myCourses')
+        for link in mycourses.find_all('a'):
+            if "/ICS/Academics/" in link.get('href'):
                 coursework_pages.append(link.get('href'))
 
         #first attempt at getting getting assignments
