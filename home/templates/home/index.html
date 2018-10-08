@@ -24,7 +24,13 @@
             </h1>
           </div>
           <div class="car-body">
+            {% if "Tomorrow" in course.assignment1Desc %}
+            <h5 class="text-warning">
+            {% elif "Today" in course.assignment1Desc %}
+            <h5 class="text-danger">
+            {% else %}
             <h5>
+            {% endif %}
               <a href="{{ course.assignment1Link }}">
                 {{ course.assignment1 }} {{ course.assignment1Progress }}
               </a>
@@ -38,7 +44,13 @@
             {% endif %}
               {{ course.assignment1Desc }}
             </p>
+            {% if "Tomorrow" in course.assignment2Desc %}
+            <h5 class="text-warning">
+            {% elif "Today" in course.assignment2Desc %}
+            <h5 class="text-danger">
+            {% else %}
             <h5>
+            {% endif %}
               <a href="{{ course.assignment2Link }}">
                 {{ course.assignment2 }} {{ course.assignment2Progress }}
               </a>
