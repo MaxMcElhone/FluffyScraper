@@ -1,12 +1,12 @@
 #Created by Max and Sam
-#go_to() for redirecting
 #https://webbot.readthedocs.io/en/latest/webbot.html reference
 from django.db import models
 from bs4 import BeautifulSoup
 from webbot import Browser
 import getpass
 
-# Create your models here.
+# Coursework model for pulling due next assignments
+# from stinet
 class Coursework:
     @staticmethod
     def coursework(user):
