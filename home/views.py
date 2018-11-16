@@ -4,7 +4,7 @@ from home.models import Coursework
 #get user input from django
 #https://stackoverflow.com/questions/25028895/very-simple-user-input-in-django
 
-# Create your views here.
+# Index view to pull all courses and output them using the index.html template
 def index(request):
     stiUser = None
     if request.method == 'POST':
